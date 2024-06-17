@@ -6,8 +6,6 @@ java_home <- rJavaEnv::java_install(java_distr)
 # check if Java was successfully installed
 rJavaEnv::java_check_version_cmd(java_home)
 
-write(java_home, file = "/home/rstudio/java_home.txt")
-
 pkgs <- c(
   'r5r',
   'accessibility',
