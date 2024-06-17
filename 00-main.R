@@ -24,3 +24,8 @@ r5r_core <- setup_r5(data_path = path, verbose = FALSE)
 
 # why?!
 
+rJavaEnv::java_env_set(here::here("rjavaenv/linux/x64/21/"))
+Sys.getenv("JAVA_HOME")
+
+rJava::.jinit()
+rJava::.jcall("java.lang.System", "S", "getProperty", "java.version")
