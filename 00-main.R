@@ -1,5 +1,5 @@
 # allocate RAM memory to Java
-options(java.parameters = "-Xmx2G")
+options(java.parameters = "-Xmx1G")
 
 # 1) build transport network, pointing to the path where OSM and GTFS data are stored
 library(r5r)
