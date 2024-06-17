@@ -7,8 +7,6 @@ rJavaEnv::java_quick_install(
 # check if Java was successfully installed
 rJavaEnv::java_check_version_cmd()
 
-system("R CMD javareconf")
-
 pkgs <- c(
   'r5r',
   'accessibility',
