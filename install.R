@@ -1,11 +1,12 @@
 remotes::install_github("e-kotov/rJavaEnv", force = TRUE, dependencies = TRUE)
 
-rJavaEnv::java_quick_install(
-  version = 21,
-  distribution = 'Corretto')
+java_distr <- rJavaEnv::java_download(21)
+java_home <- rJavaEnv::java_install(java_distr)
 
 # check if Java was successfully installed
-rJavaEnv::java_check_version_cmd()
+rJavaEnv::java_check_version_cmd(java_home)
+
+write(java_home, file = "/home/rstudio/java_home.txt")
 
 pkgs <- c(
   'r5r',
